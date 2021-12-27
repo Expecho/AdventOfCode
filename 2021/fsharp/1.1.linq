@@ -4,15 +4,11 @@
 
 let lines = seq { yield! System.IO.File.ReadLines @"C:\Sources\adventofcode\2021\fsharp\day-1-input.txt" }
 
-let getChanges (x, y) =
-    let mutable change = "jk"
-    if x = y then 
-        change <- "equal"
-    elif x < y then 
-        change <- "increase"
-    else
-        change <- "decrease"
-    change
+let getChanges pair =
+    match pair with
+    | (prev, current) when current < prev -> "decrease"
+    | (prev, current) when current > prev -> "increase"
+    | (prev, current) -> "equal"
     
 let groupResult =
   lines 
