@@ -13,6 +13,8 @@ let getChange pair =
 let groupResult =
   lines 
   |> Seq.map (fun line -> int line)
+  |> Seq.windowed 3
+  |> Seq.map (fun window -> window.Sum())
   |> Seq.pairwise 
   |> Seq.map (fun pair -> getChange pair)
   |> Seq.countBy (fun change -> change)
