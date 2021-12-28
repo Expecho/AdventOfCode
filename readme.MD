@@ -9,3 +9,7 @@ From https://adventofcode.com/:
 ## Why participate?
 
 For me personally it is a fun way of learning a new language. In 2021 I used [F#](https://en.wikipedia.org/wiki/F_Sharp_(programming_language)) to attempt to solve all puzzles.
+
+## Tooling
+
+I used [Linqpad](https://www.linqpad.net/) as it is a very simple, lightweight code editor with a nice set of features that allows for rapid development.
